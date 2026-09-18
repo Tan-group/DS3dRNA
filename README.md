@@ -34,7 +34,7 @@
   <a href="CITATIONS.md">Citations</a>
 </p>
 
-<img src="Pic/Figure1-1.png" alt="DS3dRNA workflow" width="920">
+<img src="Pic/Figure1-1.png?v=a0f9b9e" alt="DS3dRNA workflow" width="920">
 
 <p><strong>Fixed-backbone sequence design and high-throughput ranking for single-state and multi-state 3D RNA/DNA scaffolds.</strong></p>
 
