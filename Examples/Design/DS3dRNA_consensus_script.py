@@ -10,7 +10,7 @@ The conversion pipeline is:
     DS3dRNA summary CSV
     -> remove '&' from sequence columns
     -> remove rows with E_fine - E_fine_min > 10000
-    -> count-weighted profile consensus, default max_run=5
+    -> count-weighted profile consensus, default max_run=5 per chain
     -> also output the E_fine-minimum sequence as AF3 JSON
     -> split chains only by filename boundaries like _A:13_B:41
     -> write AF3 JSON
@@ -220,17 +220,35 @@ def choose_base_with_maxrun(profile_i: Dict[str, float], last_base: Optional[str
     )
 
 
-def build_count_consensus(seq_weight_pairs: List[Tuple[str, float]], max_run: int = 0) -> str:
+def build_count_consensus(
+    seq_weight_pairs: List[Tuple[str, float]],
+    max_run: int = 0,
+    chain_specs: Optional[List[Tuple[str, int]]] = None,
+) -> str:
     """
     Build count-weighted profile consensus.
 
     If max_run > 0, enforce a simple homopolymer cap during left-to-right decoding.
-    This is intentionally simple and deterministic.
+    Chain specifications use cumulative end positions parsed from the filename.
+    Reset the homopolymer count at each chain boundary so independent RNA
+    chains do not restrict one another. Without chain_specs, treat the input
+    as one chain. This is intentionally simple and deterministic.
     """
     if not seq_weight_pairs:
         raise ValueError("No sequence-weight pairs for consensus")
 
     expected_len = len(seq_weight_pairs[0][0])
+    chain_starts = set()
+    if chain_specs is not None:
+        if not chain_specs or chain_specs[-1][1] != expected_len:
+            raise ValueError("Chain specifications must end at the sequence length")
+        previous_end = 0
+        for _, end in chain_specs:
+            if end <= previous_end:
+                raise ValueError("Chain boundaries must be strictly increasing")
+            chain_starts.add(previous_end)
+            previous_end = end
+
     profile = [{b: 0.0 for b in BASE_ORDER} for _ in range(expected_len)]
 
     for seq, weight in seq_weight_pairs:
@@ -244,6 +262,9 @@ def build_count_consensus(seq_weight_pairs: List[Tuple[str, float]], max_run: in
     run_len = 0
 
     for i in range(expected_len):
+        if i in chain_starts:
+            last_base = None
+            run_len = 0
         b = choose_base_with_maxrun(profile[i], last_base, run_len, max_run)
         out.append(b)
 
@@ -502,7 +523,9 @@ def convert_one_csv(
             f"Sequence length ({observed_len}) != final chain end from filename ({expected_len})"
         )
 
-    consensus = build_count_consensus(seq_weight_pairs, max_run=max_run)
+    consensus = build_count_consensus(
+        seq_weight_pairs, max_run=max_run, chain_specs=chain_specs
+    )
 
     consensus_info = write_one_json(
         seq=consensus,
