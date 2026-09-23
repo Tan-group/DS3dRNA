@@ -10,7 +10,7 @@ date-released: "2026-08-22"
 abstract: "De novo sequence design for target three-dimensional RNA scaffolds using higher-order interactions."
 preferred-citation:
   type: article
-  title: "De novo design of 3D RNAs via higher-order interactions"
+  title: "De novo design of functional RNAs through higher-order interactions"
   authors:
     - family-names: "Yuan"
       given-names: "Tongwei"
