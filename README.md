@@ -64,7 +64,7 @@ The installer first restores the four model tensors from `Energy.zip`, then prep
 | Task | Command |
 | --- | --- |
 | RNA design (default) | `python DS3dRNA.py Examples/Design/inputs/8VY0.pdb --ss none --batch 10` |
-| DNA design | `python DS3dRNA.py target_DNA.pdb --mol DNA --batch 10` |
+| DNA design ![Beta](https://img.shields.io/badge/BETA-blue) | `python DS3dRNA.py target_DNA.pdb --mol DNA --batch 10` |
 | Sequence ranking | `python DS3dRNA.py -rank --str target.pdb --fa candidates.fasta` |
 
 > [!NOTE]
