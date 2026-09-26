@@ -6,7 +6,7 @@
 
 Please cite the DS3dRNA manuscript when using the design or ranking workflow:
 
-> Tongwei Yuan, Dong Wang, Xin-Long Chen, Han-Lin Tao, Chen-Chen Zheng, Ya-Lan Tan, Xiaocong Zhao, Xing-Hua Zhang and Zhi-Jie Tan. “De novo design of functional RNAs through higher-order interactions.” (2026). To be published.
+> Tongwei Yuan, Dong Wang, Xin-Long Chen, Han-Lin Tao, Chen-Chen Zheng, Xiao-Cong Zhao, Ya-Lan Tan, Xing-Hua Zhang and Zhi-Jie Tan. “De novo design of functional RNAs through higher-order interactions.” (2026). To be published.
 
 Preprint is coming soon…
 
