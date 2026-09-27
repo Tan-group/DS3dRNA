@@ -2,7 +2,13 @@
 
 # DS3dRNA: De novo design of functional RNAs through higher-order interactions
 
+<p>
+  <a href="https://doi.org/10.64898/2026.09.26.754601"><img src="https://img.shields.io/badge/bioRxiv-Read%20the%20Paper-B31B1B?style=for-the-badge" alt="Read the DS3dRNA paper on bioRxiv"></a>
+</p>
+
 ### De novo design of 3D RNAs via higher-order interactions
+
+**[Read the bioRxiv preprint](https://www.biorxiv.org/content/10.64898/2026.09.26.754601v1)** · Posted September 26, 2026
 
 <p>
   <a href="https://tpformer.com/talks/ds3drna-2026"><img src="https://img.shields.io/badge/2026%20Conference%20Talk-View%20Presentation-0F766E?style=for-the-badge" alt="View the 2026 DS3dRNA conference presentation"></a>
@@ -41,6 +47,17 @@
 </div>
 
 DS3dRNA searches nucleotide sequence space for sequences compatible with one or more fixed three-dimensional nucleic-acid scaffolds. It combines coarse-grained three-body TriRNASP energies, local nearest-neighbor thermodynamic screening, optional secondary-structure and frozen-site constraints, and Monte Carlo sampling. The same public entry point provides **DS3dRank** for scoring externally generated FASTA candidates.
+
+## Research preprint
+
+[De novo design of functional RNAs through higher-order interactions](https://doi.org/10.64898/2026.09.26.754601) — *bioRxiv*, September 26, 2026 (preprint; not peer reviewed).
+
+The manuscript evaluates single-state and multi-state RNA design and reports functional assays in two RNA systems:
+
+- **Mango II:** all three tested designs retained fluorogenic activity and sub- to low-nanomolar apparent affinity, with larger relative fluorescence increases at saturation than wild type.
+- **Twister ribozymes:** five designs yielded mean **20-second endpoint cleavage fractions of 37.7–50.6%**, compared with **23.5% for wild type**, at 25 °C (four replicate experiments). These endpoint measurements are not kinetic rate constants.
+
+See the [preprint](https://www.biorxiv.org/content/10.64898/2026.09.26.754601v1) for benchmark protocols, design constraints, experimental conditions, and limitations, and [CITATIONS.md](CITATIONS.md) for the full citation and BibTeX.
 
 ## At a glance
 

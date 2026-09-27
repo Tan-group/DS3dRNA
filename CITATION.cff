@@ -31,7 +31,10 @@ preferred-citation:
     - family-names: "Tan"
       given-names: "Zhi-Jie"
   year: 2026
-  notes: "To be published"
+  journal: "bioRxiv"
+  doi: "10.64898/2026.09.26.754601"
+  url: "https://www.biorxiv.org/content/10.64898/2026.09.26.754601v1"
+  notes: "Preprint posted September 26, 2026; not peer reviewed."
 references:
   - type: article
     title: "TriRNASP: A knowledge-based potential with three-body effects for accurate RNA structure evaluation"
