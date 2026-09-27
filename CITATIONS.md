@@ -12,19 +12,6 @@ Preprint posted **September 26, 2026**. This manuscript has not been peer review
 
 [Read the preprint](https://www.biorxiv.org/content/10.64898/2026.09.26.754601v1)
 
-Tongwei Yuan and Dong Wang contributed equally.
-
-```bibtex
-@article{Yuan2026DS3dRNA,
-  title = {De novo design of functional RNAs through higher-order interactions},
-  author = {Yuan, Tongwei and Wang, Dong and Chen, Xin-Long and Tao, Han-Lin and Zheng, Chen-Chen and Zhao, Xiao-Cong and Tan, Ya-Lan and Zhang, Xing-Hua and Tan, Zhi-Jie},
-  journal = {bioRxiv},
-  year = {2026},
-  doi = {10.64898/2026.09.26.754601},
-  url = {https://www.biorxiv.org/content/10.64898/2026.09.26.754601v1},
-  note = {Preprint}
-}
-```
 
 ## TriRNASP energy model
 

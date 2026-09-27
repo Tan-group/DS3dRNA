@@ -55,7 +55,7 @@ DS3dRNA searches nucleotide sequence space for sequences compatible with one or 
 The manuscript evaluates single-state and multi-state RNA design and reports functional assays in two RNA systems:
 
 - **Mango II:** all three tested designs retained fluorogenic activity and sub- to low-nanomolar apparent affinity, with larger relative fluorescence increases at saturation than wild type.
-- **Twister ribozymes:** five designs yielded mean **20-second endpoint cleavage fractions of 37.7–50.6%**, compared with **23.5% for wild type**, at 25 °C (four replicate experiments). These endpoint measurements are not kinetic rate constants.
+- **Twister ribozymes:** five designs yielded mean **20-second endpoint cleavage fractions of 37.7–50.6%**, compared with **23.5% for wild type**, at 25 °C (four replicate experiments).
 
 See the [preprint](https://www.biorxiv.org/content/10.64898/2026.09.26.754601v1) for benchmark protocols, design constraints, experimental conditions, and limitations, and [CITATIONS.md](CITATIONS.md) for the full citation and BibTeX.
 
