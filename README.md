@@ -114,6 +114,8 @@ python DS3dRNA.py -rank \
 > [!IMPORTANT]
 > Omitted `--ss`, `--ss auto`, and `--ss none` have deliberately different behavior. Read [Secondary structure](docs/INPUTS.md#secondary-structure) before production runs.
 
+Seed replay must preserve the original execution mode: replay batch-generated results with the saved `--seed_batch` archive, keeping the complete seed list and its order unchanged; replay standalone results with `--seed`. See [Reproduce a run](docs/QUICKSTART.md#2-reproduce-a-run).
+
 ## Documentation
 
 | Get started | Science and data | Reference and policy |

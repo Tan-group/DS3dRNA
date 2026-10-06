@@ -13,6 +13,12 @@ For a target named `target.pdb`, DS3dRNA creates `target_output/` next to the in
 
 Multi-run and multi-state jobs add seed-specific or multi-state naming while retaining the same information categories.
 
+## Seed archives for exact replay
+
+Automatic `--batch` design writes `seed_batches/seed_batch_<timestamp>.txt` inside the target output directory, with a numeric suffix if filenames would collide. Each archive records the target, time, round and seed count in comment headers, followed by the seeds in execution order (one integer per line). Multiple completed sampling rounds can produce multiple archives.
+
+Keep these files unchanged alongside the original command, inputs and environment details. Replay each archive with `--seed_batch`, preserving every seed, its order and the original batch boundaries. A seed extracted from a multi-seed archive and passed to `--seed` does not reproduce that batch execution; standalone single-seed results must likewise be replayed as standalone runs. See [Reproduce a run](QUICKSTART.md#2-reproduce-a-run) for commands and requirements.
+
 ## Summary fields
 
 The summary CSV reports the designed sequence and diagnostics such as:
