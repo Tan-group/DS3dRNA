@@ -10,7 +10,7 @@ TRIRNADE_BANNER = f"""
                via higher-order interactions
 ------------------------------------------------------------
 Author        : Tongwei Yuan [https://github.com/TOVI-YUEN]
-Affiliation   : School of Physics and Technology. WHU. CN
+Affiliation   : School of Physics. WHU. CN
 Contact_1     : tongwei.tovi.yuan@gmail.com
 Contact_2     : tovi_yuen@whu.edu.cn
 License       : DS3dRNA academic/non-commercial license
